@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>班级管理</title>
+</head>
+<body>
+    <h1>班级信息</h1>
+    <table>
+        <tr>
+            <td>班级编号</td>
+            <td>班级名称</td>
+            <td>班级人数</td>
+        </tr>
+
+        <tr th:each="cls:${clsList}">
+            <td th:text="${cls.id}">班级编号</td>
+            <td th:text="${cls.cname}">班级名称</td>
+            <td th:text="${cls.cnum}">班级人数</td>
+        </tr>
+    </table>
+</body>
+</html>

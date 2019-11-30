@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理平台</title>
+</head>
+<body>
+    <a th:href="|${#request.getContextPath()}/stu/list|">学生管理</a>
+    <a th:href="|${#request.getContextPath()}/cls/list|">班级管理</a>
+</body>
+</html>

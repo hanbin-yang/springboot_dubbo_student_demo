@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="|${#request.getContextPath()}/|">
+    <meta charset="UTF-8">
+    <title>增加一个学生</title>
+</head>
+<body>
+    <form method="get" action="stu/addOneStu">
+        <table>
+            <tr>
+                <td>学生姓名</td>
+                <td><input type="text" name="sname" value=""/></td>
+
+            </tr>
+
+            <tr>
+                <td>年龄</td>
+                <td><input type="text" name="age"/></td>
+            </tr>
+
+            <tr>
+                <td>所在班级</td>
+                <td>
+                    <select name="cid">
+                        <option th:each="cls : ${clsList}" th:value="${cls.id}" th:text="${cls.cname}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="提交" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
